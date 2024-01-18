@@ -7,20 +7,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="create user impl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/HttpResponse.java" afterDir="false" />
+    <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="create user impl test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/SecureCapitaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/SecureCapitaApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/controllers/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/controllers/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/mappers/RoleRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/mappers/RoleRowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/queries/UserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/queries/UserQuery.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/RoleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/RoleRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/UserRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/service/Impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/service/Impl/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,6 +151,7 @@
       <workItem from="1705510945702" duration="10051000" />
       <workItem from="1705539808265" duration="7627000" />
       <workItem from="1705547450856" duration="10433000" />
+      <workItem from="1705561085193" duration="420000" />
     </task>
     <task id="LOCAL-00001" summary="project config">
       <created>1705293419916</created>
@@ -206,7 +195,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705550693624</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="create user impl test">
+      <created>1705561125248</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705561125248</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,6 +222,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="project config" />
     <MESSAGE value="create user impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="create user impl" />
+    <MESSAGE value="create user impl test" />
+    <option name="LAST_COMMIT_MESSAGE" value="create user impl test" />
   </component>
 </project>
