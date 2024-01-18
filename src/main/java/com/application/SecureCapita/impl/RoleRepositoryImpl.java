@@ -9,14 +9,16 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
-
+import static com.application.SecureCapita.queries.RoleQuery.*;
 import java.util.Collection;
 
 import static com.application.SecureCapita.enumeration.RoleType.ROLE_USER;
 import static java.util.Map.of;
 import static java.util.Objects.requireNonNull;
 
-import com.application.SecureCapita.queries.RoleQuery;
+import static com.application.SecureCapita.queries.UserQuery.*;
+
+
 @Repository
 @RequiredArgsConstructor
 @Slf4j
