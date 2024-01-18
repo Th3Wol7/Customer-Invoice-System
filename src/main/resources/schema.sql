@@ -29,7 +29,7 @@ USE
 
 
 DROP TABLE IF EXISTS TwoFactorVerification;
-DROP TABLE IF EXISTS AccountVerification;
+DROP TABLE IF EXISTS AccountVerifications;
 DROP TABLE IF EXISTS UserEvents;
 DROP TABLE IF EXISTS Events;
 DROP TABLE IF EXISTS UserRoles;
