@@ -7,10 +7,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="banner">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/config/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="images" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -153,7 +150,7 @@
       <workItem from="1705510945702" duration="10051000" />
       <workItem from="1705539808265" duration="7627000" />
       <workItem from="1705547450856" duration="10433000" />
-      <workItem from="1705561085193" duration="3454000" />
+      <workItem from="1705561085193" duration="3847000" />
     </task>
     <task id="LOCAL-00001" summary="project config">
       <created>1705293419916</created>
@@ -225,7 +222,21 @@
       <option name="project" value="LOCAL" />
       <updated>1705600046642</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="sql queries">
+      <created>1705601174458</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1705601174458</updated>
+    </task>
+    <task id="LOCAL-00012" summary="images">
+      <created>1705601347785</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1705601347785</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -247,6 +258,8 @@
     <MESSAGE value="create user impl" />
     <MESSAGE value="create user impl test" />
     <MESSAGE value="banner" />
-    <option name="LAST_COMMIT_MESSAGE" value="banner" />
+    <MESSAGE value="sql queries" />
+    <MESSAGE value="images" />
+    <option name="LAST_COMMIT_MESSAGE" value="images" />
   </component>
 </project>
