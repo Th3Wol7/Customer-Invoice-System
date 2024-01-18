@@ -1,13 +1,12 @@
-package com.application.SecureCapita.impl;
+package com.application.SecureCapita.repositories.impl;
 
-import com.application.SecureCapita.Exceptions.ApiException;
+import com.application.SecureCapita.exceptions.ApiException;
 import com.application.SecureCapita.models.Role;
 import com.application.SecureCapita.models.User;
 import com.application.SecureCapita.repositories.RoleRepository;
 import com.application.SecureCapita.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;

@@ -1,9 +1,9 @@
-package com.application.SecureCapita.impl;
+package com.application.SecureCapita.repositories.impl;
 
-import com.application.SecureCapita.Exceptions.ApiException;
+import com.application.SecureCapita.exceptions.ApiException;
 import com.application.SecureCapita.models.Role;
 import com.application.SecureCapita.repositories.RoleRepository;
-import com.application.SecureCapita.rowmapper.RoleRowMapper;
+import com.application.SecureCapita.mappers.RoleRowMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -15,8 +15,6 @@ import java.util.Collection;
 import static com.application.SecureCapita.enumeration.RoleType.ROLE_USER;
 import static java.util.Map.of;
 import static java.util.Objects.requireNonNull;
-
-import static com.application.SecureCapita.queries.UserQuery.*;
 
 
 @Repository

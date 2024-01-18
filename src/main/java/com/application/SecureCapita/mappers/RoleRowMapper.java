@@ -1,4 +1,4 @@
-package com.application.SecureCapita.rowmapper;
+package com.application.SecureCapita.mappers;
 
 import com.application.SecureCapita.models.Role;
 import org.springframework.jdbc.core.RowMapper;
