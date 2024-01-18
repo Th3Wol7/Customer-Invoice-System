@@ -43,9 +43,9 @@ CREATE TABLE users
     last_name    VARCHAR(50)     NOT NULL,
     email        VARCHAR(100)    NOT NULL,
     password     VARCHAR(255)    NOT NULL,
-    address      VARCHAR(255)    NOT NULL,
-    phone        VARCHAR(30)     NOT NULL,
-    title        VARCHAR(50)     NOT NULL,
+    address      VARCHAR(255)    DEFAULT NULL,
+    phone        VARCHAR(30)     DEFAULT NULL,
+    title        VARCHAR(50)     DEFAULT NULL,
     bio          VARCHAR(50)  DEFAULT NULL,
     enabled      BOOLEAN      DEFAULT FALSE,
     non_locked   BOOLEAN      DEFAULT TRUE,
@@ -102,7 +102,7 @@ CREATE TABLE UserEvents
 );
 
 
-CREATE TABLE AccountVerification
+CREATE TABLE AccountVerifications
 (
     acc_ver_id        BIGINT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_id           BIGINT UNSIGNED NOT NULL,

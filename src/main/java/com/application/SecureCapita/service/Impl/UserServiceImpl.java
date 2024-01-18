@@ -20,7 +20,7 @@ public class UserServiceImpl implements UserService {
 
     private final UserRepository<User> userRepository;
     @Override
-    public UserDTO create(User user) {
+    public UserDTO createUser(User user) {
         return UserDTOMapper.fromUser(userRepository.create(user));
     }
 }

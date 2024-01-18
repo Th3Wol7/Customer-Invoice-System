@@ -37,7 +37,7 @@ public class UserRepositoryImpl implements UserRepository {
     public User create(User user) {
         //check the email is unique
         if (getEmailCount(user.getEmail().trim().toLowerCase()) > 0) {
-            throw new ApiException("Email already in us. Please us e a different email and try again.");
+            throw new ApiException("Email already in use. Please us e a different email and try again.");
         }
         //save new user
         try{
@@ -66,6 +66,7 @@ public class UserRepositoryImpl implements UserRepository {
 
             //if any errors, throw exception with proper message
         }catch(Exception exception){
+            log.error(exception.getMessage());
             throw new ApiException("An unexpected error occurred.");
         }
     }
@@ -97,8 +98,8 @@ public class UserRepositoryImpl implements UserRepository {
 
     private SqlParameterSource getSqlParameterSource(User user) {
         return new MapSqlParameterSource()
-                .addValue("firstname:", user.getFirstName())
-                .addValue("lastname", user.getLastName())
+                .addValue("firstName", user.getFirstName())
+                .addValue("lastName", user.getLastName())
                 .addValue("email", user.getEmail())
                 .addValue("password", encoder.encode(user.getPassword()));
     }
