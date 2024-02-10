@@ -3,6 +3,7 @@ package com.application.SecureCapita.repositories;
 import com.application.SecureCapita.models.User;
 
 import java.util.Collection;
+import java.util.Optional;
 
 /*
 * @author Tyrien Gilpin
@@ -21,5 +22,6 @@ public interface UserRepository <T extends User>{
 
     boolean delete(Long id);
 
-    //Complex operation
+    //Complex operations
+    Optional<T>findByEmail(String email);
 }

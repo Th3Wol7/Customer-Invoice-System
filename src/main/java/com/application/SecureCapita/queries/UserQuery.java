@@ -5,4 +5,6 @@ public class UserQuery {
             "VALUES (:firstName, :lastName, :email, :password)";
     public static final String INSERT_ACCOUNT_VERIFICATION_QUERY = "INSERT INTO AccountVerifications (user_id, url) VALUES (:userId, :url)";
     public static final String COUNT_USER_EMAIL_QUERY = "SELECT COUNT(*) FROM Users WHERE email = :email";
+    public static final String FIND_USER_BY_EMAIL_QUERY = "SELECT * FROM users WHERE email = :email";
+
 }

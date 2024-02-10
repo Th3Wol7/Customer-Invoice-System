@@ -7,8 +7,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="images">
+    <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/queries/UserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/queries/UserQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/UserRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +30,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -38,12 +48,12 @@
               <option name="branches">
                 <list>
                   <RecentBranch>
-                    <option name="branchName" value="main" />
-                    <option name="lastUsedInstant" value="1705538874" />
+                    <option name="branchName" value="jwtImpl" />
+                    <option name="lastUsedInstant" value="1707530020" />
                   </RecentBranch>
                   <RecentBranch>
-                    <option name="branchName" value="master" />
-                    <option name="lastUsedInstant" value="1705538873" />
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1705538874" />
                   </RecentBranch>
                 </list>
               </option>
@@ -155,7 +165,7 @@
       <workItem from="1705561085193" duration="3925000" />
       <workItem from="1707018609491" duration="1031000" />
       <workItem from="1707381940580" duration="68000" />
-      <workItem from="1707529185092" duration="601000" />
+      <workItem from="1707529185092" duration="5032000" />
     </task>
     <task id="LOCAL-00001" summary="project config">
       <created>1705293419916</created>
@@ -248,7 +258,14 @@
       <option name="project" value="LOCAL" />
       <updated>1705601381176</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="images">
+      <created>1707530035347</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1707530035347</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -7,6 +7,8 @@ import com.application.SecureCapita.repositories.RoleRepository;
 import com.application.SecureCapita.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.jdbc.core.namedparam.SqlParameterSource;
@@ -18,6 +20,7 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.Collection;
 import java.util.Map;
+import java.util.Optional;
 import java.util.UUID;
 
 import static com.application.SecureCapita.enumeration.RoleType.ROLE_USER;
@@ -60,6 +63,7 @@ public class UserRepositoryImpl implements UserRepository {
             //emailService.sendVerificationUrl(user.getFirstName(), user.getEmail(), verificationUrl, ACCOUNT);
             user.setEnabled(false);
             user.setNotLocked(true);
+            user.setUsingMFA(false);
 
             //return newly created user
             return user;
@@ -90,6 +94,17 @@ public class UserRepositoryImpl implements UserRepository {
     @Override
     public boolean delete(Long id) {
         return false;
+    }
+
+    @Override
+    public Optional<User> findByEmail(String email) {
+        SqlParameterSource params = new MapSqlParameterSource().addValue("email", email);
+        try {
+            User user = jdbcTemplate.queryForObject(FIND_USER_BY_EMAIL_QUERY, params, new BeanPropertyRowMapper<>(User.class));
+            return Optional.ofNullable(user);
+        } catch (EmptyResultDataAccessException e) {
+            return Optional.empty();
+        }
     }
 
     private int getEmailCount(String email) {
