@@ -1,8 +1,8 @@
 package com.application.SecureCapita.models;
 
+import com.application.SecureCapita.enumeration.RoleType;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotEmpty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,12 +15,14 @@ import org.springframework.security.core.userdetails.UserDetails;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "roles")
 @JsonInclude(JsonInclude.Include.NON_DEFAULT)
 public class Role {
     @Id
     private Long roleId;
     @NotEmpty(message = "Name cannot be empty")
-    private String name;
+    @Enumerated(EnumType.STRING)
+    private RoleType name;
     @NotEmpty(message = "Permissions cannot be empty")
     private String permission;
 }

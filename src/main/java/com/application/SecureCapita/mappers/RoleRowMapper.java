@@ -1,5 +1,6 @@
 package com.application.SecureCapita.mappers;
 
+import com.application.SecureCapita.enumeration.RoleType;
 import com.application.SecureCapita.models.Role;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -17,7 +18,7 @@ public class RoleRowMapper implements RowMapper<Role> {
     public Role mapRow(ResultSet resultSet, int rowNum) throws SQLException {
         return Role.builder()
                 .roleId(resultSet.getLong("role_id"))
-                .name(resultSet.getString("name"))
+                .name(RoleType.valueOf(resultSet.getString("name")))
                 .permission(resultSet.getString("permission"))
                 .build();
     }

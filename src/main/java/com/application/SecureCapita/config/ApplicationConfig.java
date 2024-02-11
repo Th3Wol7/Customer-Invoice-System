@@ -35,7 +35,7 @@ public class ApplicationConfig {
     public AuthenticationProvider authenticationProvider(){//data access object responsible for fetching user details and decoding passwords
          DaoAuthenticationProvider authProvider = new DaoAuthenticationProvider();
          authProvider.setUserDetailsService(userDetailsService());
-         authProvider.setPasswordEncoder(passwordEncoder());
+         authProvider.setPasswordEncoder(userPasswordEncoder());
          return authProvider;
      }
 
@@ -45,7 +45,7 @@ public class ApplicationConfig {
     }
 
     @Bean
-    public PasswordEncoder passwordEncoder() {
+    public PasswordEncoder userPasswordEncoder() {
         return new BCryptPasswordEncoder();
     }
 }

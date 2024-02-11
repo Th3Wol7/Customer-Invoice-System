@@ -48,8 +48,8 @@ CREATE TABLE users
     title        VARCHAR(50)     DEFAULT NULL,
     bio          VARCHAR(50)  DEFAULT NULL,
     enabled      BOOLEAN      DEFAULT FALSE,
-    non_locked   BOOLEAN      DEFAULT TRUE,
-    using_mfa    BOOLEAN      DEFAULT FALSE,
+    is_not_locked   BOOLEAN      DEFAULT TRUE,
+    is_using_mfa    BOOLEAN      DEFAULT FALSE,
     date_created DATETIME     DEFAULT CURRENT_TIMESTAMP,
     image_url    VARCHAR(255) DEFAULT 'https://www.flaticon.com/free-icons/user',
     CONSTRAINT UQ_Users_Email UNIQUE (email)
@@ -68,7 +68,7 @@ CREATE TABLE Roles
 
 CREATE TABLE UserRoles
 (
-    user_role_id BIGINT          NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    user_role_id BIGINT  UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
     user_id      BIGINT UNSIGNED NOT NULL,
     role_id      BIGINT UNSIGNED NOT NULL,
     FOREIGN KEY (user_id) REFERENCES Users (user_id) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -126,6 +126,12 @@ CREATE TABLE TwoFactorVerification
     CONSTRAINT UQ_TwoFactorVerification_Users_Id UNIQUE (user_id),
     CONSTRAINT UQ_TwoFactorVerification_Code UNIQUE (code)
 );
+
+INSERT INTO Roles (name, permission) Values
+    ('ROLE_USER', 'READ:USER, READ:CUSTOMER'),
+    ('ROLE_MANAGER', 'READ:USER, READ:CUSTOMER, UPDATE:USER, UPDATE:CUSTOMER'),
+    ('ROLE_ADMIN', 'READ:USER, READ:CUSTOMER, CREATE:USER, CREATE:CUSTOMER, UPDATE:USER, UPDATE:CUSTOMER'),
+    ('ROLE_SYSADMIN', 'READ:USER, READ:CUSTOMER, CREATE:USER, CREATE:CUSTOMER, UPDATE:USER, UPDATE:CUSTOMER, DELETE:USER, DELETE:CUSTOMER');
 
 
 

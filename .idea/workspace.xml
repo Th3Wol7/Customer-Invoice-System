@@ -7,15 +7,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="security impl">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/AuthenticationController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/AuthenticationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/AuthenticationResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/AuthenticationService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/RegisterRequest.java" afterDir="false" />
+    <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="auth config">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/controllers/DemoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/AuthenticationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/auth/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/config/ApplicationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/config/ApplicationConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/mappers/RoleRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/mappers/RoleRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/models/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/queries/RoleQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/queries/RoleQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/queries/UserQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/queries/UserQuery.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/RoleRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/RoleRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/RoleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/RoleRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/UserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/UserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +177,7 @@
       <workItem from="1707018609491" duration="1031000" />
       <workItem from="1707381940580" duration="68000" />
       <workItem from="1707529185092" duration="11497000" />
-      <workItem from="1707655926207" duration="6780000" />
+      <workItem from="1707655926207" duration="18906000" />
     </task>
     <task id="LOCAL-00001" summary="project config">
       <created>1705293419916</created>
@@ -305,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1707657997316</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="auth config">
+      <created>1707662769036</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1707662769036</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,6 +346,7 @@
     <MESSAGE value="Query and Mapping updates" />
     <MESSAGE value="jwt implementation" />
     <MESSAGE value="security impl" />
-    <option name="LAST_COMMIT_MESSAGE" value="security impl" />
+    <MESSAGE value="auth config" />
+    <option name="LAST_COMMIT_MESSAGE" value="auth config" />
   </component>
 </project>

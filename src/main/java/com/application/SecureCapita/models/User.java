@@ -46,7 +46,7 @@ public class User implements UserDetails {
     private String imageUrl;
     private boolean enabled;
     private boolean isNotLocked;
-    private boolean isUsingMFA;
+    private boolean isUsingMfa;
     private LocalDateTime createdAt;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
@@ -54,13 +54,12 @@ public class User implements UserDetails {
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id")
     )
-    @Enumerated(EnumType.STRING)
-    private Set<RoleType> roleTypes = new HashSet<>();
+    private Set<Role> roles = new HashSet<>();
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return roleTypes.stream()
-                .map(role -> new SimpleGrantedAuthority(role.name()))
+        return roles.stream()
+                .map(role -> new SimpleGrantedAuthority(role.getName().toString()))
                 .collect(Collectors.toList());
     }
 

@@ -1,5 +1,6 @@
 package com.application.SecureCapita.repositories.impl;
 
+import com.application.SecureCapita.enumeration.RoleType;
 import com.application.SecureCapita.exceptions.ApiException;
 import com.application.SecureCapita.models.Role;
 import com.application.SecureCapita.repositories.RoleRepository;
@@ -7,10 +8,13 @@ import com.application.SecureCapita.mappers.RoleRowMapper;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 import static com.application.SecureCapita.queries.RoleQuery.*;
 import java.util.Collection;
+import java.util.Optional;
 
 import static com.application.SecureCapita.enumeration.RoleType.ROLE_USER;
 import static java.util.Map.of;
@@ -51,13 +55,17 @@ public class RoleRepositoryImpl implements RoleRepository {
     @Override
     public void addRoleToUser(Long userId, String roleName) {
         log.info("Adding role {} to user id: {}", roleName, userId);
-        try{
-            Role role = jdbcTemplate.queryForObject(SELECT_ROLE_BY_NAME_QUERY, of("name", roleName), new RoleRowMapper());
+        try {
+            System.out.println("===================================== " + RoleType.valueOf(roleName.toUpperCase()));
+            RoleType roleType = RoleType.valueOf(roleName.toUpperCase());
+            Role role = jdbcTemplate.queryForObject(SELECT_ROLE_BY_NAME_QUERY, of("name", roleType), new RoleRowMapper());
             jdbcTemplate.update(INSERT_ROLE_TO_USER_QUERY, of("userId", userId, "roleId", requireNonNull(role).getRoleId()));
-
-        }catch(EmptyResultDataAccessException exception){
-            throw new ApiException("No role found by name: " + ROLE_USER.name());
-        }catch(Exception exception){
+            log.info("Role added successfully");
+        }catch (IllegalArgumentException e) {
+            throw new ApiException("Invalid role name: " + roleName);
+        }  catch (EmptyResultDataAccessException exception) {
+            throw new ApiException("No role found by name: " + roleName);
+        } catch (Exception exception) {
             log.error(exception.getMessage());
             throw new ApiException("An unexpected error occurred.");
         }
@@ -77,4 +85,22 @@ public class RoleRepositoryImpl implements RoleRepository {
     public void updateUserRole(Long userId, String roleName) {
 
     }
+
+    @Override
+    public Optional<Role> findByName(RoleType roleType) {
+        try {
+            Role role = jdbcTemplate.queryForObject(
+                    SELECT_ROLE_BY_NAME_QUERY,
+                    new MapSqlParameterSource("name", roleType.name()),
+                    new BeanPropertyRowMapper<>(Role.class)
+            );
+            return Optional.ofNullable(role);
+        } catch (EmptyResultDataAccessException exception) {
+            throw new ApiException("No role found by name: " + ROLE_USER.name());
+        } catch (Exception exception) {
+            log.error(exception.getMessage());
+            throw new ApiException("An unexpected error occurred.");
+        }
+    }
 }
+

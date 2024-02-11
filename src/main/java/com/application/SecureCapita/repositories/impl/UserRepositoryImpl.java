@@ -63,7 +63,7 @@ public class UserRepositoryImpl implements UserRepository {
             //emailService.sendVerificationUrl(user.getFirstName(), user.getEmail(), verificationUrl, ACCOUNT);
             user.setEnabled(false);
             user.setNotLocked(true);
-            user.setUsingMFA(false);
+            user.setUsingMfa(false);
 
             //return newly created user
             return user;
@@ -87,9 +87,26 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User update(User data) {
-        return null;
+    public User update(User user) {
+        // Prepare the parameters for the SQL query
+        SqlParameterSource parameters = new MapSqlParameterSource()
+                .addValue("userId", user.getUserId())
+                .addValue("firstName", user.getFirstName())
+                .addValue("lastName", user.getLastName())
+                .addValue("email", user.getEmail())
+                .addValue("password", user.getPassword());
+        // Execute the SQL update query
+        int updatedRows = jdbcTemplate.update(UPDATE_USER_QUERY, parameters);
+
+        // Check if the update was successful
+        if (updatedRows == 0) {
+            throw new ApiException("Failed to update user.");
+        }
+
+        // Return the updated user
+        return user;
     }
+
 
     @Override
     public boolean delete(Long id) {

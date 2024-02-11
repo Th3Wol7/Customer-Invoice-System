@@ -1,8 +1,10 @@
 package com.application.SecureCapita.repositories;
 
+import com.application.SecureCapita.enumeration.RoleType;
 import com.application.SecureCapita.models.Role;
 
 import java.util.Collection;
+import java.util.Optional;
 
 /*
  * @author Tyrien Gilpin
@@ -22,10 +24,10 @@ public interface RoleRepository <T extends Role>{
     boolean delete(Long id);
 
     //Complex operations
-    void addRoleToUser(Long userId, String rowName);
+    void addRoleToUser(Long userId, String roleName);
 
     Role getRoleByUserId(Long userID);
     Role getRoleByUserEmail(String email);
     void updateUserRole(Long userId, String roleName);
-
+    Optional<Object> findByName(RoleType roleType);
 }
