@@ -8,8 +8,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="896f553d-2712-4d0c-ad7b-e341b7432b4a" name="Changes" comment="images">
-      <change afterPath="$PROJECT_DIR$/ReadMe.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/RoleRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/application/SecureCapita/repositories/impl/RoleRepositoryImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.SecureCapitaApplication" />
         <item itemvalue="Spring Boot.SecureCapitaApplication" />
       </list>
     </recent_temporary>
