@@ -40,7 +40,7 @@ public class UserRepositoryImpl implements UserRepository {
     public User create(User user) {
         //check the email is unique
         if (getEmailCount(user.getEmail().trim().toLowerCase()) > 0) {
-            throw new ApiException("Email already in use. Please us e a different email and try again.");
+            throw new ApiException("Email already in use. Please use a different email and try again.");
         }
         //save new user
         try{

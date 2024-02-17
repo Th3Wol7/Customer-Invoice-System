@@ -47,6 +47,7 @@ public class User implements UserDetails {
     private boolean enabled;
     private boolean isNotLocked;
     private boolean isUsingMfa;
+    @Column(name = "date_created")
     private LocalDateTime createdAt;
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(
