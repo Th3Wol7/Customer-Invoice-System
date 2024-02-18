@@ -9,8 +9,22 @@ This project implements a JWT (JSON Web Token) authentication service using Spri
 - Security: Utilizes Spring Security to secure endpoints and manage authentication and authorization.
 - Demo endpoint: Includes a demo endpoint for testing purposes.
 
-## Installation
+## Customization and Configuration
+The security configuration is organized into classes within the `configuration` package. Key aspects of the configuration include defining a security filter chain bean and customizing security filters.
 
+### Security Filter Chain
+The `SecurityConfig` class is responsible for defining the security filter chain bean. Multiple configurations can be defined for different user roles.
+
+### Custom Filters and Authentication Providers
+While Spring Security provides default implementations for authentication, custom filters, and authentication providers can be created to meet specific requirements. The application demonstrates how to define custom authentication providers and configure user detail services.
+
+## Further Reading and Resources
+For deeper understanding and reference, the following resources are provided:
+- [Spring Security Documentation](https://docs.spring.io/spring-security/site/docs/current/reference/html5/)
+    - Detailed documentation on Spring Security concepts, including authentication, authorization, and configuration.
+
+
+## Installation
 1. Clone the repository: `git clone <repository_url>`
 2. Navigate to the project directory: `cd jwt-authentication-service`
 3. Build the project using Maven: `mvn clean package`
